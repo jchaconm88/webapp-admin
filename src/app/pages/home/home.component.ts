@@ -6,7 +6,6 @@ import { Firestore, collectionData, collection } from '@angular/fire/firestore';
 import { NbSecurityModule } from '@nebular/security';
 import { TableComponent } from '../../theme/controls/table/table.component';
 import { AppTableDefDetail } from '../../theme/models/app-table-def-detail';
-import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +15,6 @@ import { TableModule } from 'primeng/table';
     NbIconModule,
     NbActionsModule,
     NbSecurityModule,
-    TableModule,
     TableComponent
   ],
   templateUrl: './home.component.html',
