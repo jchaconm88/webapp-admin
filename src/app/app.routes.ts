@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NbAuthComponent, NbLogoutComponent, NbRequestPasswordComponent, NbResetPasswordComponent } from '@nebular/auth';
-import { AuthGuard } from './auth.guard';
+import { Routes } from '@angular/router';
+import { NbAuthComponent, NbLoginComponent, NbLogoutComponent, NbRegisterComponent, NbRequestPasswordComponent, NbResetPasswordComponent } from '@nebular/auth';
 import { LoginComponent } from './theme/components/login/login.component';
+import { AuthGuard } from './auth.guard';
 import { RegisterComponent } from './theme/components/register/register.component';
 
-const routes: Routes = [
+export const routes: Routes = [
     { path: '', 
       canActivate: [AuthGuard],
       loadChildren: () => import('./pages/pages.routes').then(m => m.AUTH_ROUTES) }, 
@@ -40,9 +39,3 @@ const routes: Routes = [
         ],
       }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

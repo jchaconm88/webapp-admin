@@ -1,0 +1,18 @@
+@import './themes';
+
+@mixin nb-overrides() {
+    .mat-mdc-table {
+        background-color: nb-theme(card-background-color) !important;
+        color: nb-theme(card-text-color) !important;
+    }
+
+    .mat-mdc-cell,
+    .mat-mdc-header-cell {
+        font-family: nb-theme(menu-text-font-family) !important;
+        font-size: nb-theme(menu-text-font-size) !important;
+        font-weight: nb-theme(menu-text-font-weight) !important;
+        line-height: nb-theme(menu-text-line-height) !important;
+        background-color: nb-theme(card-background-color) !important;
+        color: nb-theme(card-text-color) !important;
+    }
+}
